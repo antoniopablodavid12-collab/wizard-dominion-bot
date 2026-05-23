@@ -1,4 +1,4 @@
-```js id="o6v2kd"
+```js id="x4n7pm"
 const { Client, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
@@ -14,8 +14,16 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', message => {
-  if (message.content === '!ping') {
-    message.reply('Pong!');
+  if (message.author.bot) return;
+
+  // Ping Role Command
+  if (message.content === '!event') {
+    message.channel.send('<@&ROLE_ID> Event is starting!');
+  }
+
+  // Sticky Message
+  if (message.channel.id === 'CHANNEL_ID') {
+    message.channel.send('📌 Please follow the server rules.');
   }
 });
 
