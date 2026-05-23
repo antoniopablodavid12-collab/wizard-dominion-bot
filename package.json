@@ -1,0 +1,10 @@
+```json id="h8v4qm"
+{
+  "name": "wizard-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.15.3"
+  }
+}
+```
